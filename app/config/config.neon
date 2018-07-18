@@ -1,0 +1,19 @@
+application:
+    mapping:
+        *: App\Modules\*\Presenters\*Presenter
+
+php:
+    date.timezone: Europe/Prague
+
+session:
+    expiration: 14 days
+    savePath: "%tempDir%/sessions"
+
+database:
+    dsn: 'mysql:host=localhost;dbname=local_experimantal'
+    user: 'root'
+    password: ''
+
+services:
+    router: App\Factories\RouterFactory::create
+    authenticator: App\Models\Authentication
