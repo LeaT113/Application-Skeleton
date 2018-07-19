@@ -25,7 +25,7 @@ jobs:
                 - travis_retry composer create-project nette/coding-standard temp/coding-standard --no-progress
 
             script:
-                - php temp/code-checker/src/code-checker.php --short-arrays --strict-types
+                - php code-checker --short-arrays --strict-types
 
     allow_failures:
         -   stage: Code Coverage
