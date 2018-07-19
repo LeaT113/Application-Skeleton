@@ -10,10 +10,6 @@ before_install:
 install:
     - travis_retry composer install --no-progress --prefer-dist
 
-after_failure:
-    # Print *.actual content
-    - for i in $(find tests -name \*.actual); do echo "--- $i"; cat $i; echo; echo; done
-
 jobs:
     include:
         -   stage: Code Standard Checker
@@ -22,13 +18,14 @@ jobs:
                 # Install Nette Code Checker
                 - travis_retry composer create-project nette/code-checker temp/code-checker ~2 --no-progress
                 # Install Nette Coding Standard
-                - travis_retry composer create-project nette/coding-standard temp/coding-standard --no-progress
+              - travis_retry composer create-project nette/coding-standard temp/coding-standard --no-progress
 
             script:
-                - php code-checker --short-arrays --strict-types
+                - php temp/code-checker --short-arrays --strict-types
+                - php temp/coding-standard/ecs check src tests
 
     allow_failures:
-        -   stage: Code Coverage
+        -   stage: Code Standard Checker
 
 sudo: false
 
