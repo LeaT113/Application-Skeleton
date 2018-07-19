@@ -6,6 +6,8 @@
  * @version 17.07.2018
  */
 
+declare(strict_types=1);
+
 namespace App\Modules\Frontend\Presenters;
 
 use Nette\Application\UI\Presenter;
