@@ -40,9 +40,9 @@ class Authentication implements Security\IAuthenticator
 	 * @return Security\IIdentity
 	 * @throws Security\AuthenticationException
 	 */
-    public function authenticate(array $credentials): Security\IIdentity
+	public function authenticate(array $credentials): Security\IIdentity
 	{
-        [$nickname, $password] = $credentials;
+		[$nickname, $password] = $credentials;
 
 		$passwordManager = new Security\Passwords;
 
