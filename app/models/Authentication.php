@@ -29,7 +29,7 @@ class Authentication implements Security\IAuthenticator
 	 * Authentication constructor
 	 * @param Database\Context $database
 	 */
-	function __construct(Database\Context $database)
+	public function __construct(Database\Context $database)
 	{
 		$this->database = $database;
 	}
@@ -40,19 +40,19 @@ class Authentication implements Security\IAuthenticator
 	 * @return Security\IIdentity
 	 * @throws Security\AuthenticationException
 	 */
-	function authenticate(array $credentials): Security\IIdentity
+    public function authenticate(array $credentials): Security\IIdentity
 	{
-		list($nickname, $password) = $credentials;
+        [$nickname, $password] = $credentials;
 
 		$passwordManager = new Security\Passwords;
 
 		$result = $this->database->table('app_users')->where('nickname', $nickname)->fetch();
 
-		if(!$result) {
+		if (!$result) {
 			throw new Security\AuthenticationException('User was not found');
 		}
 
-		if(!$passwordManager->verify($password, $result->password)) {
+		if (!$passwordManager->verify($password, $result->password)) {
 			throw new Security\AuthenticationException('Password is not correct');
 		}
 

@@ -13,5 +13,4 @@ namespace App\Modules\Frontend\Presenters;
 
 class HomePresenter extends FrontendPresenter
 {
-
 }

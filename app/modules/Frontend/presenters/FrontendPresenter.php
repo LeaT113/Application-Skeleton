@@ -10,8 +10,8 @@ declare(strict_types=1);
 
 namespace App\Modules\Frontend\Presenters;
 
-use Nette\Application\UI\Presenter;
 use Nette;
+use Nette\Application\UI\Presenter;
 
 
 /**
