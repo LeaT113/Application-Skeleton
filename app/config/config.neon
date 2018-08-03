@@ -7,7 +7,11 @@ php:
 
 session:
 	expiration: 14 days
-	savePath: "%tempDir%/sessions"
+	savePath: '%tempDir%/sessions'
+
+tracy:
+	fromEmail: mailer@sitole.cz
+	email: sveceny@sitole.cz
 
 mail:
 	smtp: true
