@@ -9,6 +9,13 @@ session:
 	expiration: 14 days
 	savePath: "%tempDir%/sessions"
 
+mail:
+	smtp: true
+	host: smtp.seznam.cz
+	username: mailer@sitole.cz
+	password: 2cjcqVdMcSjbR8DQhh6s
+	secure: ssl
+
 database:
 	dsn: 'mysql:host=localhost;dbname=local_experimantal'
 	user: 'root'
