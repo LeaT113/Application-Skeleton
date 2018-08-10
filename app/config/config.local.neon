@@ -1,0 +1,5 @@
+mail:
+	smtp: true
+	host: smtp.mailtrap.io
+	username: 2438ad2cd42d07
+	password: b999518d419a8a
