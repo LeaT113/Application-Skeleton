@@ -17,7 +17,7 @@ $configurator->createRobotLoader()
 
 $configurator->addConfig(__DIR__ . '/config/config.neon');
 
-if ($_SERVER['HTTP_HOST'] == 'home.com') {
+if ($_SERVER['HTTP_HOST'] == 'localhost') {
 	$configurator->addConfig(__DIR__ . '/config/config.local.neon');
 }
 
