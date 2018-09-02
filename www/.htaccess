@@ -7,11 +7,11 @@ Allow from all
 
 # Combined CSS and Javascript files
 <IfModule mod_include.c>
-    AddType text/css .css
-    AddOutputFilter INCLUDES .css
+	AddType text/css .css
+	AddOutputFilter INCLUDES .css
 
-    AddType application/javascript .js
-    AddOutputFilter INCLUDES .js
+	AddType application/javascript .js
+	AddOutputFilter INCLUDES .js
 </IfModule>
 
 # Enable cool URL
