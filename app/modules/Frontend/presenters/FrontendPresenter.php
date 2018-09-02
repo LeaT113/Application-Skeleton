@@ -20,12 +20,6 @@ use Nette\Application\UI\Presenter;
 abstract class FrontendPresenter extends Presenter
 {
 	/**
-	 * @var Nette\Database\Context
-	 * @inject
-	 */
-	public $database;
-
-	/**
 	 * @var Nette\Http\Session
 	 * @inject
 	 */
