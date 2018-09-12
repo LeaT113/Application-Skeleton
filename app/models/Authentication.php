@@ -19,9 +19,7 @@ use Nette\Security;
  */
 class Authentication implements Security\IAuthenticator
 {
-	/**
-	 * @var Database\Context
-	 */
+	/** @var Database\Context */
 	private $database;
 
 
