@@ -23,6 +23,7 @@
 		"tracy/tracy": "^2.5"
 	},
 	"require-dev": {
+		"phpstan/phpstan-nette": "0.10.*",
 		"phpstan/phpstan": "0.10.*",
 		"nette/tester": "^2.0"
 	},
