@@ -13,6 +13,7 @@ install:
 script:
     - php temp/code-checker/src/code-checker.php --short-arrays --strict-types --fix --no-progress --eol
     - php temp/coding-standard/ecs check app --config temp/coding-standard/coding-standard-php71.yml
+    - php vendor/phpstan/bin/phpstan analyse app
 
 before_script:
     - composer install --no-interaction --prefer-dist
