@@ -11,11 +11,11 @@ install:
     - travis_retry composer create-project nette/coding-standard temp/coding-standard ^2 --no-progress
 
 script:
-    - php temp/code-checker/src/code-checker.php --short-arrays --strict-types --fix --no-progress --eol
+    - php temp/code-checker/code-checker --short-arrays --strict-types --fix --no-progress --eol
     - php temp/coding-standard/ecs check app --config temp/coding-standard/coding-standard-php71.yml
 
     # PHP Stan code integrity checker
-    - vendor/bin/phpstan analyse app -c phpstan.neon --no-progress
+    - vendor/bin/phpstan analyse app -c phpstan.neon --level 1 --no-progress
 
 before_script:
     - composer install --no-interaction --prefer-dist
