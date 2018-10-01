@@ -1,4 +1,5 @@
 application:
+	scanDirs: false
 	mapping:
 		*: App\Modules\*\Presenters\*Presenter
 

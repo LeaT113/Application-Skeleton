@@ -10,11 +10,6 @@ $configurator->setDebugMode('82.99.140.158');
 $configurator->enableTracy(__DIR__ . '/../log');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
 
-$configurator->createRobotLoader()
-	->addDirectory(__DIR__)
-	->setAutoRefresh(true)
-	->register();
-
 $configurator->addConfig(__DIR__ . '/config/config.neon');
 
 if ($_SERVER['HTTP_HOST'] == 'localhost') {
