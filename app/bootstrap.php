@@ -6,18 +6,21 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $configurator = new Nette\Configurator;
 
-$configurator->setDebugMode('82.99.140.158');
+// Register Nette debug mode
+$debugMode = $_SERVER['HTTP_HOST'] == 'localhost';
+
+$configurator->setDebugMode($debugMode);
 $configurator->enableTracy(__DIR__ . '/../log');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
 
 $configurator->createRobotLoader()
+	->setAutoRefresh($debugMode)
 	->addDirectory(__DIR__)
-	->setAutoRefresh(true)
 	->register();
 
 $configurator->addConfig(__DIR__ . '/config/config.neon');
 
-if ($_SERVER['HTTP_HOST'] == 'localhost') {
+if ($debugMode) {
 	$configurator->addConfig(__DIR__ . '/config/config.local.neon');
 }
 
