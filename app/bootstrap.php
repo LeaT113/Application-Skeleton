@@ -13,11 +13,6 @@ $configurator->setDebugMode($debugMode);
 $configurator->enableTracy(__DIR__ . '/../log');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
 
-$configurator->createRobotLoader()
-	->setAutoRefresh($debugMode)
-	->addDirectory(__DIR__)
-	->register();
-
 $configurator->addConfig(__DIR__ . '/config/config.neon');
 
 if ($debugMode) {
