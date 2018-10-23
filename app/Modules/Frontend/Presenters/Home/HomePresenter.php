@@ -8,7 +8,9 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Frontend\Presenters;
+namespace App\Modules\Frontend\Presenters\Home;
+
+use App\Modules\Frontend\FrontendPresenter;
 
 
 class HomePresenter extends FrontendPresenter

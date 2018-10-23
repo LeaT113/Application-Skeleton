@@ -1,7 +1,7 @@
 application:
 	scanDirs: off
 	mapping:
-		*: App\Modules\*\Presenters\*Presenter
+		*: [App\Modules, *, Presenters\*\*Presenter]
 
 php:
 	date.timezone: Europe/Prague
