@@ -8,7 +8,7 @@
 		"nette/bootstrap": "3.0.*",
 		"nette/caching": "3.0.*",
 		"nette/database": "3.0.*",
-		"nette/di": "dev-master#2b7b84051d6c10322302dd60aeba687511b3c5bd",
+		"nette/di": "3.0.*",
 		"nette/forms": "3.0.*",
 		"nette/http": "3.0.*",
 		"nette/mail": "3.0.*",
