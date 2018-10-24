@@ -16,9 +16,9 @@ tracy:
 
 mail:
 	smtp: true
-	host: smtp.seznam.cz
-	username: mailer@sitole.cz
-	password: 2cjcqVdMcSjbR8DQhh6s
+	host: ''
+	username: ''
+	password: ''
 	secure: ssl
 
 database:
