@@ -7,7 +7,7 @@ require __DIR__ . '/../vendor/autoload.php';
 $configurator = new Nette\Configurator;
 
 // Register Nette debug mode
-$debugMode = $_SERVER['HTTP_HOST'] == 'localhost';
+$debugMode = $_SERVER['SERVER_NAME'] === 'localhost';
 
 $configurator->setDebugMode($debugMode);
 $configurator->enableTracy(__DIR__ . '/../log');
